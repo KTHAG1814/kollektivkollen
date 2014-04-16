@@ -1,4 +1,4 @@
-kollektivkollen
+Kollektivkollen
 ===============
 
-Kollektivkollen is a schoolproject about sustainability
+Kollektivkollen is a schoolproject about sustainability.
