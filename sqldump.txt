@@ -1,0 +1,75 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.12
+-- http://www.phpmyadmin.net
+--
+-- Värd: localhost:3306
+-- Tid vid skapande: 11 maj 2014 kl 21:52
+-- Serverversion: 5.5.34
+-- PHP-version: 5.5.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Databas: `kollektivkollen`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tabellstruktur `favourites`
+--
+
+CREATE TABLE `favourites` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user` bigint(20) NOT NULL,
+  `from_station` int(11) NOT NULL,
+  `to_station` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellstruktur `stations`
+--
+
+CREATE TABLE `stations` (
+  `sl_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- --------------------------------------------------------
+
+--
+-- Tabellstruktur `trips`
+--
+
+CREATE TABLE `trips` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `from_station` int(11) NOT NULL,
+  `to_station` int(11) NOT NULL,
+  `departure_time` datetime NOT NULL,
+  `arrival_time` datetime NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellstruktur `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `sl_access` varchar(13) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumpning av Data i tabell `users`
+--

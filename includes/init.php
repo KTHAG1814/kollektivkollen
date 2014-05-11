@@ -50,4 +50,4 @@ $price = array(
 
 );
 
-$db = new PDO("mysql:host=localhost;dbname=kollektivkollen", 'kollektivkollen', 'patric123');
+$db = new PDO("mysql:host=localhost;dbname=kollektivkollen", 'kollektivkollen', 'hemligt');
